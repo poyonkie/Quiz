@@ -1,0 +1,39 @@
+<div class="row marketing">
+  <p>
+    <h4><span>1)</span> ¿Te  gusto el evento?</h4>
+    <ul>
+      <li><input type="radio" name="A" ng-model="encuesta.A.fix_answer" value="Si"> A. Si</li>
+      <li><input type="radio" name="A" ng-model="encuesta.A.fix_answer" value="No"> B. No ¿Por qué? 
+      <input type="text" class="form-control" ng-disabled="encuesta.A.fix_answer !== 'No'" ng-model="encuesta.A.answer"></li>
+  	</ul>
+  </p>
+
+  <p>
+    <h4><span>2)</span> ¿Qué mejorarías del  evento?</h4>
+    <ul>
+      <li><input type="radio" name="B" ng-model="encuesta.B.fix_answer" value="Organización"> A. Organización</li>
+      <li><input type="radio" name="B" ng-model="encuesta.B.fix_answer" value="Atención"> B. Atención</li>
+      <li><input type="radio" name="B" ng-model="encuesta.B.fix_answer" value="Precio"> C. Precio</li>
+      <li><input type="radio" name="B" ng-model="encuesta.B.fix_answer" value="Lugar"> D. Lugar</li>
+      <li><input type="radio" name="B" ng-model="encuesta.B.fix_answer" value="Seguridad"> E. Seguridad</li>
+      <li><input type="radio" name="B" ng-model="encuesta.B.fix_answer" value="Otra"> F. Otra. ¿Cuál? 
+      <input type="text" class="form-control" ng-disabled="encuesta.B.fix_answer !== 'Otra'" ng-model="encuesta.B.answer"></li>
+    </ul>
+  </p>
+
+  <p>
+    <h4><span>3)</span> ¿La  seguridad  del evento la consideras?</h4>
+    <ul>
+      <li><input type="radio" name="C" ng-model="encuesta.C.fix_answer" value="Excelente"> A. Excelente</li>
+      <li><input type="radio" name="C" ng-model="encuesta.C.fix_answer" value="Atención"> B. Regular</li>
+      <li><input type="radio" name="C" ng-model="encuesta.C.fix_answer" value="Precio"> C. Buena</li>
+      <li><input type="radio" name="C" ng-model="encuesta.C.fix_answer" value="Lugar"> D. Mala</li>
+    </ul>
+  </p>
+
+  <p style="border-bottom: dotted 1px gray;">&nbsp;</p>
+  <p class="col-xs-6 col-xs-offset-3">
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-disabled="enabledSubmit()" ng-click="submitPoll()">Salvar Encuesta</button>
+  </p>
+
+</div>
